@@ -1,0 +1,13 @@
+{
+  "name": "AI HERITAGE LENS",
+  "description": "Your Intelligent Gateway to Bagalkote's Heritage - AI-powered monument recognition, historical exploration, multilingual assistant, and smart trip planning for Badami, Pattadakal, and Aihole.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
+
