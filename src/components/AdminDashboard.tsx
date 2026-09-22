@@ -3,6 +3,7 @@ import { ShieldCheck, BarChart3, Database, MessageSquare, PlusCircle, Sparkles, 
 import { Monument, Language } from '../types';
 import { MONUMENTS } from '../data/monumentsData';
 import { TOURIST_SERVICES } from '../data/tourismServices';
+import { VERIFIED_IMAGES } from '../data/verifiedImages';
 
 interface AdminDashboardProps {
   language: Language;
@@ -48,7 +49,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
       period: '6th–8th Century CE',
       dynasty: 'Badami Chalukyas',
       architectureStyle: newMonumentStyle,
-      image: newMonumentImage || 'https://images.unsplash.com/photo-1599818985172-5207c29759ba?auto=format&fit=crop&w=1000&q=80',
+      image: newMonumentImage || VERIFIED_IMAGES.virupaksha,
       shortDescription: {
         en: `Heritage monument situated in ${newMonumentLocation}, showcasing ${newMonumentStyle}.`,
         kn: `${newMonumentLocation} ನಲ್ಲಿರುವ ಐತಿಹಾಸಿಕ ಸ್ಮಾರಕ.`,

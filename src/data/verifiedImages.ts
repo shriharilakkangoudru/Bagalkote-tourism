@@ -5,33 +5,36 @@
 
 export const VERIFIED_IMAGES = {
   // Badami
-  badamiCaves: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80',
-  bhutanatha: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80',
-  badamiFort: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80',
-  banashankari: 'https://images.unsplash.com/photo-1609949279531-cf48d64bed89?auto=format&fit=crop&w=1200&q=80',
-  mahakuta: 'https://images.unsplash.com/photo-1571536802807-30451e3955d8?auto=format&fit=crop&w=1200&q=80',
+  badamiCaves: '/images/monuments/badami-caves.jpg',
+  badamiCavesExterior: '/images/monuments/badami-caves-exterior.jpg',
+  bhutanatha: '/images/monuments/bhutanatha.jpg',
+  badamiFort: '/images/monuments/badami-fort.jpg',
+  banashankari: '/images/monuments/banashankari.jpg',
+  mahakuta: '/images/monuments/mahakuta.jpg',
 
   // Pattadakal
-  virupaksha: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
-  mallikarjuna: 'https://images.unsplash.com/photo-1608481337062-4093bf3ed404?auto=format&fit=crop&w=1200&q=80',
-  papanatha: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80',
+  virupaksha: '/images/monuments/virupaksha.jpg',
+  virupakshaView2: '/images/monuments/virupaksha-view2.jpg',
+  mallikarjuna: '/images/monuments/mallikarjuna.jpg',
+  papanatha: '/images/monuments/papanatha.jpg',
 
   // Aihole
-  durgaTemple: 'https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1200&q=80',
-  ladKhan: 'https://images.unsplash.com/photo-1620766182966-c6eb5ed2b788?auto=format&fit=crop&w=1200&q=80',
-  ravanaPhadi: 'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1200&q=80',
-  aiholeComplex: 'https://images.unsplash.com/photo-1506461883276-594a12b11cf3?auto=format&fit=crop&w=1200&q=80',
+  durgaTemple: '/images/monuments/durga-temple.jpg',
+  ladKhan: '/images/monuments/lad-khan.jpg',
+  ladKhanInterior: '/images/monuments/lad-khan-interior.jpg',
+  ravanaPhadi: '/images/monuments/ravana-phadi.jpg',
+  aiholeComplex: '/images/monuments/aihole-complex.jpg',
 
-  // Architectural Details
-  carvingsNataraja: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=80',
-  pillarsDetail: 'https://images.unsplash.com/photo-1617854818583-09e7f077a156?auto=format&fit=crop&w=1200&q=80',
-  stoneSanctum: 'https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=1200&q=80',
-  sandstoneCourtyard: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80',
-  archaeologicalPath: 'https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1200&q=80',
-  karnatakaHeritage: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=1200&q=80',
+  // Architectural Details & Sculptures from actual sites
+  carvingsNataraja: '/images/monuments/nataraja-cave1.jpg',
+  pillarsDetail: '/images/monuments/lad-khan-interior.jpg',
+  stoneSanctum: '/images/monuments/carvings-pattadakal.jpg',
+  sandstoneCourtyard: '/images/monuments/badami-caves-exterior.jpg',
+  archaeologicalPath: '/images/monuments/aihole-complex.jpg',
+  karnatakaHeritage: '/images/monuments/bhutanatha.jpg',
 
   // Fallback
-  defaultFallback: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
+  defaultFallback: '/images/monuments/virupaksha.jpg',
 };
 
 export interface InternetSamplePhoto {

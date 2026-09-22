@@ -19,8 +19,8 @@ export const MONUMENTS: Monument[] = [
     image: VERIFIED_IMAGES.virupaksha,
     galleryImages: [
       VERIFIED_IMAGES.virupaksha,
-      VERIFIED_IMAGES.carvingsNataraja,
-      VERIFIED_IMAGES.pillarsDetail,
+      VERIFIED_IMAGES.virupakshaView2,
+      VERIFIED_IMAGES.stoneSanctum,
     ],
     shortDescription: {
       en: 'The crowning jewel of Pattadakal UNESCO World Heritage site, built by Queen Lokamahadevi in 740 CE to commemorate victory over Kanchipuram.',
@@ -84,8 +84,8 @@ export const MONUMENTS: Monument[] = [
     image: VERIFIED_IMAGES.badamiCaves,
     galleryImages: [
       VERIFIED_IMAGES.badamiCaves,
+      VERIFIED_IMAGES.badamiCavesExterior,
       VERIFIED_IMAGES.carvingsNataraja,
-      VERIFIED_IMAGES.sandstoneCourtyard,
     ],
     shortDescription: {
       en: 'Four monumental rock-cut shrines carved into dramatic red sandstone cliffs, celebrated for the 18-armed Nataraja with 81 dancing postures.',
@@ -214,8 +214,8 @@ export const MONUMENTS: Monument[] = [
     image: VERIFIED_IMAGES.bhutanatha,
     galleryImages: [
       VERIFIED_IMAGES.bhutanatha,
-      VERIFIED_IMAGES.badamiCaves,
-      VERIFIED_IMAGES.sandstoneCourtyard,
+      VERIFIED_IMAGES.badamiFort,
+      VERIFIED_IMAGES.badamiCavesExterior,
     ],
     shortDescription: {
       en: 'Idyllic sandstone temple resting directly on the waters edge of Agastya Lake, famed for mirror reflections during golden hour sunsets.',

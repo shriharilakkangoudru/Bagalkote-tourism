@@ -1,14 +1,10 @@
 import express from 'express';
 import path from 'path';
-import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import { createServer as createViteServer } from 'vite';
 import { GoogleGenAI } from '@google/genai';
 
 dotenv.config();
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = 3000;
@@ -124,12 +120,34 @@ app.get('/api/config/maps', (req, res) => {
   });
 });
 
-// 1b. Check Image from Internet URL
+// 1b. Check Image from Internet URL or local assets
 app.post('/api/check-image-url', async (req, res) => {
   try {
     const { imageUrl } = req.body;
     if (!imageUrl || typeof imageUrl !== 'string') {
       return res.status(400).json({ valid: false, error: 'Valid imageUrl required' });
+    }
+
+    // Handle local images in /public
+    if (imageUrl.startsWith('/images/') || imageUrl.startsWith('images/')) {
+      const fs = await import('fs');
+      const relPath = imageUrl.startsWith('/') ? imageUrl.slice(1) : imageUrl;
+      const localPath = path.join(process.cwd(), 'public', relPath);
+      if (fs.existsSync(localPath)) {
+        const buffer = fs.readFileSync(localPath);
+        const ext = path.extname(localPath).toLowerCase();
+        const contentType = ext === '.png' ? 'image/png' : 'image/jpeg';
+        const base64 = buffer.toString('base64');
+        const dataUrl = `data:${contentType};base64,${base64}`;
+        return res.json({
+          valid: true,
+          status: 200,
+          contentType,
+          sizeBytes: buffer.length,
+          dataUrl,
+          sourceUrl: imageUrl,
+        });
+      }
     }
 
     const response = await fetch(imageUrl, {
@@ -209,22 +227,35 @@ app.post('/api/gemini/recognize', async (req, res) => {
     if (imageBase64) {
       cleanBase64 = imageBase64.replace(/^data:image\/\w+;base64,/, '');
     } else if (imageUrl) {
-      // Download image from internet
-      try {
-        const imgRes = await fetch(imageUrl, {
-          signal: AbortSignal.timeout(8000),
-          headers: {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-          },
-        });
-        if (!imgRes.ok) {
-          return res.status(400).json({ error: `Could not fetch image from internet: HTTP ${imgRes.status}` });
+      if (imageUrl.startsWith('/images/') || imageUrl.startsWith('images/')) {
+        const fs = await import('fs');
+        const relPath = imageUrl.startsWith('/') ? imageUrl.slice(1) : imageUrl;
+        const localPath = path.join(process.cwd(), 'public', relPath);
+        if (fs.existsSync(localPath)) {
+          const buffer = fs.readFileSync(localPath);
+          cleanBase64 = buffer.toString('base64');
+          effectiveMime = path.extname(localPath).toLowerCase() === '.png' ? 'image/png' : 'image/jpeg';
+        } else {
+          return res.status(404).json({ error: 'Local monument image not found' });
         }
-        effectiveMime = imgRes.headers.get('content-type') || 'image/jpeg';
-        const arrayBuffer = await imgRes.arrayBuffer();
-        cleanBase64 = Buffer.from(arrayBuffer).toString('base64');
-      } catch (fetchErr: any) {
-        return res.status(400).json({ error: `Failed to download image from internet: ${fetchErr?.message}` });
+      } else {
+        // Download image from internet
+        try {
+          const imgRes = await fetch(imageUrl, {
+            signal: AbortSignal.timeout(8000),
+            headers: {
+              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+            },
+          });
+          if (!imgRes.ok) {
+            return res.status(400).json({ error: `Could not fetch image from internet: HTTP ${imgRes.status}` });
+          }
+          effectiveMime = imgRes.headers.get('content-type') || 'image/jpeg';
+          const arrayBuffer = await imgRes.arrayBuffer();
+          cleanBase64 = Buffer.from(arrayBuffer).toString('base64');
+        } catch (fetchErr: any) {
+          return res.status(400).json({ error: `Failed to download image from internet: ${fetchErr?.message}` });
+        }
       }
     } else {
       return res.status(400).json({ error: 'No image or imageUrl provided' });
@@ -427,6 +458,9 @@ Respond strictly with valid JSON format:
     return res.json({ isLiveAI: false, error: error?.message });
   }
 });
+
+// Serve public images statically
+app.use('/images', express.static(path.join(process.cwd(), 'public/images')));
 
 // Setup Vite development middleware or static production serving
 async function start() {
