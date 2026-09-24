@@ -358,10 +358,25 @@ app.post('/api/gemini/chat', async (req, res) => {
       });
     }
 
+<<<<<<< HEAD
     const langInstruction =
       language === 'kn'
         ? 'Please answer in fluent, respectful, and culturally authentic Kannada (ಕನ್ನಡ ಲಿಪಿಯಲ್ಲಿ).'
         : language === 'hi'
+=======
+    // Auto-detect Indic script from message if typed/spoken in Kannada or Hindi
+    const effectiveLanguage =
+      /[\u0C80-\u0CFF]/.test(message)
+        ? 'kn'
+        : /[\u0900-\u097F]/.test(message)
+        ? 'hi'
+        : language;
+
+    const langInstruction =
+      effectiveLanguage === 'kn'
+        ? 'Please answer in fluent, respectful, and culturally authentic Kannada (ಕನ್ನಡ ಲಿಪಿಯಲ್ಲಿ).'
+        : effectiveLanguage === 'hi'
+>>>>>>> 21ec09a (Bagalkote-Tourism-Website)
         ? 'Please answer in clear, engaging Hindi (हिन्दी देवनागरी लिपि में).'
         : 'Please answer in engaging, informative, high-clarity English.';
 

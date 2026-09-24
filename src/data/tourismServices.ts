@@ -47,10 +47,17 @@ export const TOURIST_SERVICES: TouristServiceListing[] = [
     category: 'emergency',
     title: 'Badami Community Health Centre (CHC)',
     location: 'Station Road, Badami (near Bus Stand)',
+<<<<<<< HEAD
     description: 'Government 24/7 emergency trauma, medical ward, and ambulance base for the Badami heritage circuit.',
     phone: '+91 8357 220025',
     timings: '24 Hours / Casualty',
     highlight: 'Nearest Government Hospital to Cave Temples'
+=======
+    description: '24/7 emergency trauma care, medical ward, and ambulance base for the Badami heritage circuit.',
+    phone: '+91 8357 220025',
+    timings: '24 Hours / Casualty',
+    highlight: 'Nearest Public Health Hospital to Cave Temples'
+>>>>>>> 21ec09a (Bagalkote-Tourism-Website)
   },
   {
     id: 'em-hosp-bagalkote',
@@ -229,7 +236,11 @@ export const TOURISM_SERVICES: TourismServiceItem[] = [
     subtitle: 'Assistance for Domestic & International Travelers',
     contact: '1363 / +91 80 2235 2828',
     timing: '24/7 Available in English, Kannada, Hindi',
+<<<<<<< HEAD
     address: 'Department of Tourism, Government of Karnataka',
+=======
+    address: 'District Tourism Facilitation Center, Navanagar, Bagalkot',
+>>>>>>> 21ec09a (Bagalkote-Tourism-Website)
     badge: 'Tourist Desk',
     verified: true
   }

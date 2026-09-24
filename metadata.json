@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "name": "AI HERITAGE LENS",
   "description": "Your Intelligent Gateway to Bagalkote's Heritage - AI-powered monument recognition, historical exploration, multilingual assistant, and smart trip planning for Badami, Pattadakal, and Aihole.",
+=======
+  "name": "TECH YODDHAS - AI HERITAGE LENS",
+  "description": "Bagalkot Tourism & Heritage Platform by Team Tech Yoddhas - AI-powered live camera monument recognition, historical exploration, multilingual assistant (English, Kannada, Hindi), and smart trip planning for Badami, Pattadakal, and Aihole.",
+>>>>>>> 21ec09a (Bagalkote-Tourism-Website)
   "requestFramePermissions": [
     "camera",
     "microphone",
@@ -10,4 +15,7 @@
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
   ]
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 21ec09a (Bagalkote-Tourism-Website)

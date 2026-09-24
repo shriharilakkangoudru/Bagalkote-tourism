@@ -1,5 +1,14 @@
 export type Language = 'en' | 'kn' | 'hi';
 
+<<<<<<< HEAD
+=======
+export type AppTheme =
+  | 'sandstone-gold'
+  | 'agastya-night'
+  | 'emerald-monsoon'
+  | 'royal-amethyst';
+
+>>>>>>> 21ec09a (Bagalkote-Tourism-Website)
 export type MonumentCategory = 'All' | 'Badami' | 'Pattadakal' | 'Aihole' | 'Temples' | 'Caves' | 'Museums';
 
 export interface Monument {

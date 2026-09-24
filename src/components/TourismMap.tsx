@@ -507,7 +507,11 @@ export const TourismMap: React.FC<TourismMapProps> = ({
       )}
 
       {/* Google Maps Interactive Viewport Stage */}
+<<<<<<< HEAD
       <div className="relative w-full h-[520px] sm:h-[600px] rounded-3xl overflow-hidden border-2 border-amber-500/40 shadow-2xl bg-[#0e141f]">
+=======
+      <div className="relative w-full h-[420px] sm:h-[520px] md:h-[600px] rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-amber-500/40 shadow-2xl bg-[#0e141f]">
+>>>>>>> 21ec09a (Bagalkote-Tourism-Website)
         {apiKey ? (
           <APIProvider apiKey={apiKey} solutionChannel="GMP_visgl_rgm_v1">
             <Map

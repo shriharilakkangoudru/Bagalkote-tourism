@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Sparkles, X, ChevronRight, ChevronLeft, CheckCircle2, Play, Award, Zap, Code, ShieldCheck, Compass, Camera, Bot, Calendar, MapPin } from 'lucide-react';
+=======
+import { Sparkles, X, ChevronRight, ChevronLeft, CheckCircle2, Play, Award, Zap, Code, ShieldCheck, Compass, Bot, Calendar, MapPin } from 'lucide-react';
+>>>>>>> 21ec09a (Bagalkote-Tourism-Website)
 import { Monument } from '../types';
 import { MONUMENTS } from '../data/monumentsData';
 
@@ -36,12 +40,21 @@ export const CompetitionDemoModal: React.FC<CompetitionDemoModalProps> = ({
       step: 1,
       title: 'Step 1: AI Monument Recognition',
       tab: 'identify',
+<<<<<<< HEAD
       icon: Camera,
       headline: 'Neural Visual Identification & Multimodal Vision',
       description:
         'Demonstrates real-time image processing via camera capture or photo upload, with live Gemini 3.8 Flash Vision model analysis and an instant smart fallback classifier for offline presentations.',
       techHighlights: [
         'WebRTC MediaDevices camera streaming & canvas capture',
+=======
+      icon: Sparkles,
+      headline: 'Neural Visual Identification & Multimodal Vision',
+      description:
+        'Demonstrates real-time architectural analysis across verified Chalukya monuments, with live Gemini 3.8 Flash Vision model analysis and an instant smart fallback classifier for offline presentations.',
+      techHighlights: [
+        'Client-side architectural analysis & neural vision',
+>>>>>>> 21ec09a (Bagalkote-Tourism-Website)
         'Gemini Vision API multimodal prompt orchestration',
         'Confidence score calculation & architectural feature segmentation',
       ],
@@ -133,8 +146,13 @@ export const CompetitionDemoModal: React.FC<CompetitionDemoModalProps> = ({
   };
 
   return (
+<<<<<<< HEAD
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
       <div className="bg-[#121824] border-2 border-amber-500/60 rounded-3xl max-w-2xl w-full shadow-2xl overflow-hidden flex flex-col text-white animate-in fade-in zoom-in duration-200">
+=======
+    <div className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-2 sm:p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
+      <div className="bg-[#121824] border-2 border-amber-500/60 rounded-2xl sm:rounded-3xl max-w-2xl w-full my-2 sm:my-auto max-h-[94vh] sm:max-h-[90vh] shadow-2xl overflow-hidden flex flex-col text-white animate-in fade-in zoom-in duration-200">
+>>>>>>> 21ec09a (Bagalkote-Tourism-Website)
         {/* Header */}
         <div className="px-6 py-4 bg-gradient-to-r from-amber-600/30 via-[#182133] to-amber-600/30 border-b border-amber-500/30 flex items-center justify-between">
           <div className="flex items-center space-x-2.5">
@@ -143,10 +161,17 @@ export const CompetitionDemoModal: React.FC<CompetitionDemoModalProps> = ({
             </div>
             <div>
               <h3 className="text-base font-bold text-white font-serif flex items-center space-x-2">
+<<<<<<< HEAD
                 <span>College Technology Competition Mode</span>
               </h3>
               <p className="text-[11px] text-amber-300/80">
                 Guided Demonstration Flow • Step {currentStep.step} of {demoSteps.length}
+=======
+                <span>Team Tech Yoddhas Showcase Mode</span>
+              </h3>
+              <p className="text-[11px] text-amber-300/80">
+                Interactive Guided Flow • Step {currentStep.step} of {demoSteps.length}
+>>>>>>> 21ec09a (Bagalkote-Tourism-Website)
               </p>
             </div>
           </div>
@@ -178,7 +203,11 @@ export const CompetitionDemoModal: React.FC<CompetitionDemoModalProps> = ({
         </div>
 
         {/* Step Body */}
+<<<<<<< HEAD
         <div className="p-6 sm:p-8 space-y-5">
+=======
+        <div className="p-5 sm:p-8 space-y-5 overflow-y-auto flex-1">
+>>>>>>> 21ec09a (Bagalkote-Tourism-Website)
           <div className="flex items-center space-x-3">
             <div className="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-500/40 text-amber-300 flex items-center justify-center shadow-lg flex-shrink-0">
               <StepIcon className="w-6 h-6" />

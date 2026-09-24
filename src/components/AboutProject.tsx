@@ -14,6 +14,7 @@ export const AboutProject: React.FC<AboutProjectProps> = ({ onOpenDemo }) => {
       <div className="text-center space-y-3">
         <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold">
           <Award className="w-4 h-4" />
+<<<<<<< HEAD
           <span>College-Level Technology Competition Showcase</span>
         </div>
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-serif tracking-tight">
@@ -21,6 +22,15 @@ export const AboutProject: React.FC<AboutProjectProps> = ({ onOpenDemo }) => {
         </h2>
         <p className="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto">
           "Your Intelligent Gateway to Bagalkote's Heritage" — Bridging 1,400 years of Early Chalukya stone art with state-of-the-art multimodal artificial intelligence.
+=======
+          <span>Team Tech Yoddhas Innovation Showcase</span>
+        </div>
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-serif tracking-tight">
+          Tech Yoddhas — AI Heritage Lens
+        </h2>
+        <p className="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto">
+          "Your Intelligent Gateway to Bagalkot's Heritage" — Bridging 1,400 years of Early Chalukya stone art with state-of-the-art multimodal artificial intelligence.
+>>>>>>> 21ec09a (Bagalkote-Tourism-Website)
         </p>
       </div>
 
@@ -42,7 +52,11 @@ export const AboutProject: React.FC<AboutProjectProps> = ({ onOpenDemo }) => {
           </div>
           <h3 className="text-lg font-bold font-serif text-white">The Objective</h3>
           <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+<<<<<<< HEAD
             Create an intuitive, zero-barrier digital guide that instantly decodes any temple facade through a tourist's camera, speaks native Kannada and Hindi, and crafts optimized travel itineraries tailored to real budgets.
+=======
+            Create an intuitive, zero-barrier digital guide that instantly decodes any temple facade through interactive AI vision, speaks native Kannada and Hindi, and crafts optimized travel itineraries tailored to real budgets.
+>>>>>>> 21ec09a (Bagalkote-Tourism-Website)
           </p>
         </div>
 
@@ -78,9 +92,15 @@ export const AboutProject: React.FC<AboutProjectProps> = ({ onOpenDemo }) => {
           </div>
 
           <div className="p-4 rounded-2xl bg-[#1b2333] border border-gray-800 space-y-1">
+<<<<<<< HEAD
             <p className="text-xs font-bold text-emerald-400 uppercase">Audio & Camera</p>
             <p className="text-sm font-semibold text-white">Web Browser APIs</p>
             <p className="text-[11px] text-gray-400">MediaDevices getUserMedia + Web Speech API</p>
+=======
+            <p className="text-xs font-bold text-emerald-400 uppercase">Audio & Speech</p>
+            <p className="text-sm font-semibold text-white">Web Speech API</p>
+            <p className="text-[11px] text-gray-400">SpeechRecognition & SpeechSynthesis in Kannada, Hindi & English</p>
+>>>>>>> 21ec09a (Bagalkote-Tourism-Website)
           </div>
 
           <div className="p-4 rounded-2xl bg-[#1b2333] border border-gray-800 space-y-1">
@@ -93,7 +113,11 @@ export const AboutProject: React.FC<AboutProjectProps> = ({ onOpenDemo }) => {
         {/* Call to open demo */}
         <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-gray-800">
           <div className="text-xs text-gray-400">
+<<<<<<< HEAD
             Engineered for excellence in technological innovation, aesthetic sophistication, and cultural preservation.
+=======
+            Engineered with pride by Team Tech Yoddhas for excellence in technological innovation, aesthetic sophistication, and cultural preservation.
+>>>>>>> 21ec09a (Bagalkote-Tourism-Website)
           </div>
           <button
             onClick={onOpenDemo}
