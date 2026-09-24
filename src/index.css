@@ -1,0 +1,244 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+/* Universal Viewport & Responsive Sizing Controls */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg, video, canvas {
+  max-width: 100%;
+}
+
+/* Custom Leaflet Styling for Dark & Warm Sandstone Theme */
+.leaflet-container {
+  font-family: inherit;
+  background-color: #0d131f !important;
+  z-index: 1;
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: #121927 !important;
+  color: #f3f4f6 !important;
+  border-radius: 1rem !important;
+  border: 1px solid rgba(217, 119, 6, 0.4) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5) !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+.leaflet-popup-tip {
+  background-color: #121927 !important;
+  border-top: 1px solid rgba(217, 119, 6, 0.4) !important;
+}
+
+.leaflet-control-zoom a {
+  background-color: #141c2c !important;
+  color: #fbbf24 !important;
+  border-color: #374151 !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: #d97706 !important;
+  color: #0b0f17 !important;
+}
+
+.leaflet-control-attribution {
+  background: rgba(15, 23, 42, 0.85) !important;
+  color: #9ca3af !important;
+  font-size: 10px !important;
+}
+
+.leaflet-control-attribution a {
+  color: #f59e0b !important;
+}
+
+/* Custom Marker Styling */
+.bagalkot-custom-pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+  border: 2px solid white;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.bagalkot-custom-pin:hover {
+  transform: scale(1.25) translateY(-4px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d121c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a3447;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}
+
+/* Professional Heritage Animated Background Keyframes */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateY(-24px) translateX(12px) scale(1.08);
+    opacity: 0.55;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.15;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.35;
+  }
+}
+
+@keyframes audioEqualizer {
+  0%, 100% {
+    height: 4px;
+  }
+  50% {
+    height: 18px;
+  }
+}
+
+@keyframes micPulseRing {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 14px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 12s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatSlow 16s ease-in-out 3s infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 8s ease-in-out infinite;
+}
+
+.animate-mic-pulse {
+  animation: micPulseRing 1.6s infinite;
+}
+
+/* Waterfalls Explorer Opening Animations */
+@keyframes waterfallModalOpen {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(24px);
+    filter: blur(10px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.01) translateY(-4px);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0px);
+  }
+}
+
+@keyframes cascadeCardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes waterMistPulse {
+  0%, 100% {
+    opacity: 0.18;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.38;
+    transform: scale(1.12) rotate(3deg);
+  }
+}
+
+@keyframes waterRippleEffect {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@keyframes waterShimmerFlow {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-waterfall-modal {
+  animation: waterfallModalOpen 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-cascade-card {
+  animation: cascadeCardSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-mist-glow {
+  animation: waterMistPulse 7s ease-in-out infinite;
+}
+
+.animate-ripple {
+  animation: waterRippleEffect 2.4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}

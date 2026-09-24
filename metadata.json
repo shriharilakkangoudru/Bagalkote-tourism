@@ -1,0 +1,12 @@
+{
+  "name": "TECH YODDHAS - AI HERITAGE LENS",
+  "description": "Bagalkot Tourism & Heritage Platform by Team Tech Yoddhas - AI-powered live camera monument recognition, historical exploration, multilingual assistant (English, Kannada, Hindi), and smart trip planning for Badami, Pattadakal, and Aihole.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
